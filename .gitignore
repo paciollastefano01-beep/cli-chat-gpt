@@ -1,0 +1,14 @@
+# API Keys (MAI su GitHub!)
+.env
+
+# Python
+__pycache__/
+*.pyc
+
+# Virtual environment
+venv/
+env/
+
+# Dati utente
+*.json
+conversations/
