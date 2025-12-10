@@ -12,18 +12,21 @@ Chat da terminale con OpenAI GPT-3.5-turbo.
 
 Applicazione da terminale per chattare con GPT-3.5-turbo di OpenAI. Un progetto educativo per imparare a integrare API di intelligenza artificiale in applicazioni Python.
 
-### ✨ Funzionalità Attuali (Giorno 18)
+### ✨ Funzionalità Attuali (Giorno 20)
 - ✅ Chat interattiva con GPT-3.5-turbo
-- ✅ Storico completo della conversazione
+- ✅ Storico completo della conversazione in memoria
 - ✅ Risposte in italiano
-- ✅ Gestione errori e retry automatico
-- ✅ Interfaccia CLI colorata e intuitiva
+- ✅ Gestione errori con messaggi di cortesia
+- ✅ Persistenza su file JSON con `/save` e `/load`
+- ✅ Gestione conversazioni salvate con `/list`
+- ✅ Reset rapido della chat con `/new`
+- ✅ Comando `/help` con elenco comandi disponibili
+- ✅ Architettura OOP con classe `ChatManager`
 
-### 🔮 In Sviluppo (Giorno 19-21)
-- ⏳ Salvataggio conversazioni con comando `/save`
-- ⏳ Caricamento conversazioni salvate con `/load`
-- ⏳ Reset chat con comando `/new`
-- ⏳ Esportazione conversazioni in formato Markdown
+### 🔮 In Sviluppo
+- ⏳ Esportazione conversazioni in formato Markdown/PDF
+- ⏳ Statistiche conversazione (token, costi stimati)
+- ⏳ Supporto GPT-4 / modelli più avanzati
 
 ---
 
@@ -94,13 +97,15 @@ python main.py
 
 ### Comandi Disponibili
 
-| Comando | Descrizione |
-|---------|-------------|
-| Scrivi un messaggio | Invia il messaggio a GPT |
-| `exit` o `quit` | Termina l'applicazione |
-| `/save` | (In sviluppo) Salva conversazione |
-| `/load` | (In sviluppo) Carica conversazione |
-| `/new` | (In sviluppo) Nuova conversazione |
+| Comando          | Descrizione                                  |
+|------------------|----------------------------------------------|
+| Testo normale    | Invia il messaggio a GPT                     |
+| `exit` / `quit`  | Termina l'applicazione                       |
+| `/new`           | Nuova conversazione (reset dello storico)    |
+| `/save [nome]`   | Salva la conversazione corrente in JSON      |
+| `/list`          | Elenca le conversazioni salvate              |
+| `/load`          | Carica una conversazione salvata             |
+| `/help` / `/h`   | Mostra la lista dei comandi disponibili      |
 
 ### Esempio di Conversazione
 
@@ -213,14 +218,15 @@ venv/
 - [x] Gestione errori base
 - [x] README documentazione
 
-### 🔄 Fase 2 - Persistenza (In corso)
-- [ ] Comando `/save` per salvare chat
-- [ ] Comando `/load` per caricare chat salvate
-- [ ] Comando `/new` per reset conversazione
-- [ ] Formato JSON per storage
+### ✅ Fase 2 - Persistenza (Completata)
+- [x] Comando `/save` per salvare chat in JSON
+- [x] Comando `/load` per caricare chat salvate
+- [x] Comando `/new` per reset conversazione
+- [x] Formato JSON per storage in `conversations/`
+- [x] Comando `/list` per elencare le conversazioni salvate
 
-### 🔮 Fase 3 - Miglioramenti (Futuri)
-- [ ] Refactoring con OOP (classi)
+### 🔄 Fase 3 - Miglioramenti (In corso)
+- [x] Refactoring con OOP (classe `ChatManager`)
 - [ ] Indicatore "GPT sta scrivendo..."
 - [ ] Colorazione sintassi codice
 - [ ] Statistiche conversazione (token, costi)
