@@ -195,7 +195,7 @@ class ChatManager:
         ]
 
         if not files:
-            print("📂 Nessuna conversazione slavata.")
+            print("📂 Nessuna conversazione salvata.")
             return
 
         files = sorted(files)
@@ -226,7 +226,7 @@ class ChatManager:
                 continue
 
             print(
-                f"{idx}. {filename} | messaggi: {message_count} | salvata oò: {saved_at}"
+                f"{idx}. {filename} | messaggi: {message_count} | salvata il: {saved_at}"
             )
 
         # 4) Chiedo all'utente quale conversazione vuole caricare
@@ -317,7 +317,7 @@ class ChatManager:
 
             # risposta di cortesia all'utente
             return (
-                "Scusa, si è verificato un errore tecnico con l'AI. Riprova atra poco"
+                "Scusa, si è verificato un errore tecnico con l'AI. Riprova tra poco"
             )
 
         # 3) Se tutto ok, estraggo testo della risposta di GPT
@@ -345,7 +345,7 @@ class ChatManager:
         Ritorna:
         - False se NON è un comando (deve essere inviato a GPT)
         - True se è un comando gestito (non mandare a GPT)
-        . Una stringa speciale (se. "EXIT") per indicare uscita dal programma
+        - "EXIT" se bisogna terminare il programma
         """
         if not user_input.startswith("/"):
             return False
