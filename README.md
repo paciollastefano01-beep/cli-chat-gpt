@@ -39,15 +39,15 @@
 
 **Application startup**
 
-![CLI startup](screenshots/01-avvio.png)
+<img src="screenshots/01-avvio.png" width="800">
 
 **Chat with GPT-3.5**
 
-![Conversation](screenshots/02-conversazione.png)
+<img src="screenshots/02-conversazione.png" width="800">
 
 **Available commands**
 
-![Commands](screenshots/03-help.png)
+<img src="screenshots/03-help.png" width="800">
 
 ---
 
