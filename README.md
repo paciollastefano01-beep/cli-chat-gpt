@@ -44,7 +44,7 @@
 *Esempio di conversazione con GPT-3.5-turbo*
 
 ![Comando help](screenshots/03-help.png)
-*Comandi disponibili con /help*
+*\nComandi disponibili con /help*
 
 ---
 
