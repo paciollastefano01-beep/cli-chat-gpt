@@ -37,13 +37,16 @@
 
 ## 🎬 Demo
 
-![Avvio CLI](screenshots/01-avvio.png)
+ <img src="screenshots/01-avvio.png" width="700">
+
 *Schermata di avvio dell'applicazione*
 
-![Esempio conversazione](screenshots/02-conversazione.png)
+<img src="screenshots/02-conversazione.png" width="700">
+
 *Esempio di conversazione con GPT-3.5-turbo*
 
-![Comando help](screenshots/03-help.png)
+<img src="screenshots/03-help.png" width="700">
+
 *\nComandi disponibili con /help*
 
 ---
