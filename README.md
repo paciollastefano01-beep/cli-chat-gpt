@@ -1,66 +1,67 @@
 # 💬 CLI Chat GPT
 
-Chat da terminale con OpenAI GPT-3.5-turbo.
+> Terminal chatbot powered by OpenAI GPT-3.5-turbo with **conversation persistence**, **multi-chat management**, and **intuitive command system**.
 
-![Python](https://img.shields.io/badge/python-3.8+-blue.svg)
-![OpenAI](https://img.shields.io/badge/OpenAI-API-green.svg)
-![Status](https://img.shields.io/badge/status-in%20development-yellow.svg)
+![Python](https://img.shields.io/badge/python-3.10+-blue.svg)
+![OpenAI](https://img.shields.io/badge/OpenAI-GPT--3.5-green.svg)
+![License](https://img.shields.io/badge/license-MIT-blue.svg)
 
 ---
 
-## 📋 Descrizione
+## ✨ Features
 
-Applicazione da terminale per chattare con GPT-3.5-turbo di OpenAI. Un progetto educativo per imparare a integrare API di intelligenza artificiale in applicazioni Python.
+**Professional CLI chatbot** with full conversation management and OOP architecture.
 
-### ✨ Funzionalità Attuali (Giorno 20)
-- ✅ Chat interattiva con GPT-3.5-turbo
-- ✅ Storico completo della conversazione in memoria
-- ✅ Risposte in italiano
-- ✅ Gestione errori con messaggi di cortesia
-- ✅ Persistenza su file JSON con `/save` e `/load`
-- ✅ Gestione conversazioni salvate con `/list`
-- ✅ Reset rapido della chat con `/new`
-- ✅ Comando `/help` con elenco comandi disponibili
-- ✅ Architettura OOP con classe `ChatManager`
+✅ **AI-powered conversations**
+  - Real-time chat with GPT-3.5-turbo
+  - Full conversation history maintained
+  - Customizable system message
 
-### 🔮 In Sviluppo
-- ⏳ Esportazione conversazioni in formato Markdown/PDF
-- ⏳ Statistiche conversazione (token, costi stimati)
-- ⏳ Supporto GPT-4 / modelli più avanzati
+✅ **Conversation persistence**
+  - Save chats with `/save [name]` (timestamp + custom name)
+  - Load any previous conversation with `/load`
+  - List all saved chats with `/list`
+  - JSON-based storage
+
+✅ **Intuitive CLI**
+  - Simple command system
+  - Built-in help with `/help`
+  - Clean terminal interface
+
+✅ **Robust architecture**
+  - OOP design with `ChatManager` class
+  - Type hints and docstrings
+  - Graceful error handling with rollback
 
 ---
 
 ## 🎬 Demo
 
-<!-- SCREENSHOT 1: Avvio applicazione -->
 ![Avvio CLI](screenshots/01-avvio.png)
 *Schermata di avvio dell'applicazione*
 
-<!-- SCREENSHOT 2: Conversazione esempio -->
 ![Esempio conversazione](screenshots/02-conversazione.png)
 *Esempio di conversazione con GPT-3.5-turbo*
 
-
 ---
 
-## 🚀 Installazione
+## 🚀 Installation
 
-### Prerequisiti
+### Prerequisites
 
-Prima di iniziare, assicurati di avere:
-- **Python 3.8 o superiore** installato ([Download Python](https://www.python.org/downloads/))
-- **Account OpenAI** con API key ([Registrati qui](https://platform.openai.com/signup))
-- **Crediti OpenAI** (minimo $5 consigliati per testing)
+- **Python 3.10 or higher** ([Download Python](https://www.python.org/downloads/))
+- **OpenAI API key** ([Get one here](https://platform.openai.com/api-keys))
+- **OpenAI credits** (minimum $5 recommended for testing)
 
-### Setup Rapido
+### Quick Start
 
-**1. Clona il repository:**
+**1. Clone repository:**
 ```bash
 git clone https://github.com/paciollastefano01-beep/cli-chat-gpt.git
 cd cli-chat-gpt
 ```
 
-**2. Crea ambiente virtuale (consigliato):**
+**2. Create virtual environment:**
 ```bash
 # Windows
 python -m venv venv
@@ -71,221 +72,278 @@ python3 -m venv venv
 source venv/bin/activate
 ```
 
-**3. Installa le dipendenze:**
+**3. Install dependencies:**
 ```bash
 pip install -r requirements.txt
 ```
 
-**4. Configura l'API key:**
+**4. Setup API key:**
 
-Crea un file chiamato `.env` nella root del progetto:
-```plaintext
-OPENAI_API_KEY=sk-proj-LA_TUA_CHIAVE_API_QUI
+Create a `.env` file in project root:
+```env
+OPENAI_API_KEY=your-api-key-here
 ```
 
-⚠️ **IMPORTANTE:** Ottieni la tua chiave API su [platform.openai.com/api-keys](https://platform.openai.com/api-keys)
+⚠️ Get your API key: [platform.openai.com/api-keys](https://platform.openai.com/api-keys)
 
----
-
-## 💻 Utilizzo
-
-### Avvio Applicazione
-
+**5. Run:**
 ```bash
 python main.py
 ```
 
-### Comandi Disponibili
+### Verify Installation
 
-| Comando          | Descrizione                                  |
-|------------------|----------------------------------------------|
-| Testo normale    | Invia il messaggio a GPT                     |
-| `exit` / `quit`  | Termina l'applicazione                       |
-| `/new`           | Nuova conversazione (reset dello storico)    |
-| `/save [nome]`   | Salva la conversazione corrente in JSON      |
-| `/list`          | Elenca le conversazioni salvate              |
-| `/load`          | Carica una conversazione salvata             |
-| `/help` / `/h`   | Mostra la lista dei comandi disponibili      |
-
-### Esempio di Conversazione
-
+If successful, you'll see:
 ```
 💬 CLI Chat GPT
-Scrivi un messaggio e premi Invio. Digita 'exit' per uscire.
+Scrivi un messaggio e premi Invio.
+Usa i comandi /new, /list, /save, /load, /exit
 
-Tu: Ciao, come stai?
-
-GPT: Ciao! Sto bene, grazie per aver chiesto. Come posso aiutarti oggi?
-
-Tu: Raccontami una barzelletta sui programmatori
-
-GPT: Certo! Eccone una:
-Perché i programmatori confondono Halloween e Natale?
-Perché Oct 31 = Dec 25! 🎃🎄
-(31 in ottale = 25 in decimale)
-
-Tu: Spiega il machine learning in modo semplice
-
-GPT: Il machine learning è come insegnare a un bambino a riconoscere
-gli animali. Invece di dargli regole tipo "se ha 4 zampe e miagola è
-un gatto", gli mostri tante foto di gatti finché impara da solo a
-riconoscerli. Il computer fa lo stesso con i dati!
-
-Tu: exit
-👋 Arrivederci! Conversazione terminata.
+Tu:
 ```
 
 ---
 
-## 🛠️ Tecnologie
+## 💡 Usage
 
-- **Python 3.11** - Linguaggio di programmazione
-- **OpenAI API** - GPT-3.5-turbo per intelligenza artificiale
-- **python-dotenv** - Gestione sicura delle variabili d'ambiente
+### Basic Chat
+
+Simply type your message and press Enter:
+```
+Tu: What's the capital of Italy?
+
+GPT: The capital of Italy is Rome.
+
+Tu: Tell me more about it
+
+GPT: Rome is one of the oldest cities...
+```
+
+### Available Commands
+
+| Command | Description | Example |
+|---------|-------------|---------|
+| Text | Send message to GPT | `What's the weather?` |
+| `/new` | Start new conversation | `/new` |
+| `/save [name]` | Save current conversation | `/save brainstorming` |
+| `/load` | Load saved conversation | `/load` → select from list |
+| `/list` | Show all saved conversations | `/list` |
+| `/help` or `/h` | Show available commands | `/help` |
+| `/exit` or `/quit` | Exit application | `/exit` |
+
+### Example Workflow
+
+**1. Have a conversation:**
+```
+Tu: Help me write a professional email
+
+GPT: I'd be happy to help! What's the email about?
+
+Tu: Requesting a meeting with a potential client
+
+GPT: Here's a professional template:
+
+Subject: Meeting Request - [Your Company]
+
+Dear [Client Name],
+
+I hope this email finds you well. I'm reaching out to discuss...
+```
+
+**2. Save it:**
+```
+Tu: /save email-template
+💾 Conversazione salvata in: conversations/2025-01-21T14-30-00_email-template.json
+```
+
+**3. Load it later:**
+```
+Tu: /load
+
+📂 Conversazioni disponibili:
+1. 2025-01-21T14-30-00_email-template.json | messaggi: 8 | salvata il: 2025-01-21T14:30:00
+
+Seleziona il numero: 1
+✅ Conversazione caricata. Messaggi: 8
+```
+
+**4. Continue the conversation:**
+```
+Tu: Can you make it more formal?
+
+GPT: Certainly! Here's a more formal version...
+```
 
 ---
 
-## 📁 Struttura Progetto
+## 🛠️ Tech Stack
+
+- **Python 3.10+** - Programming language with type hints
+- **OpenAI API** - GPT-3.5-turbo for AI conversations
+- **python-dotenv** - Secure environment variable management
+- **JSON** - Local conversation storage
+
+---
+
+## 📁 Project Structure
 
 ```
 cli-chat-gpt/
-├── screenshots/          # Screenshot per documentazione
+├── chat_manager.py       # ChatManager class (core logic)
+├── main.py               # Entry point (8 lines)
+├── .env                  # API key (not in git)
+├── .env.example          # Template for .env
+├── requirements.txt      # Dependencies
+├── .gitignore           # Git ignore rules
+├── LICENSE              # MIT License
+├── README.md            # This file
+├── screenshots/          # Demo screenshots
 │   ├── 01-avvio.png
-│   ├── 02-conversazione.png
-│   └── 03-errori.png
-├── .env                  # API key (NON committare!)
-├── .gitignore           # File da ignorare su Git
-├── main.py              # Codice principale applicazione
-├── requirements.txt     # Dipendenze Python
-└── README.md           # Questa documentazione
+│   └── 02-conversazione.png
+└── conversations/        # Saved conversations (JSON, gitignored)
+```
+
+### Architecture
+
+**OOP design** with `ChatManager` class encapsulating:
+- OpenAI client management
+- Conversation state (messages array)
+- Persistence layer (save/load to JSON)
+- Command parser (CLI routing)
+
+**Entry point** (`main.py`):
+```python
+from chat_manager import ChatManager
+
+if __name__ == "__main__":
+    chat = ChatManager()
+    chat.run()
 ```
 
 ---
 
-## 💰 Costi API
+## 💰 API Costs
 
-### Modello GPT-3.5-turbo
+### GPT-3.5-turbo Pricing
 
-| Tipo | Costo |
-|------|-------|
-| **Input** | $0.50 per 1M token |
-| **Output** | $1.50 per 1M token |
+| Type | Cost |
+|------|------|
+| **Input** | $0.50 per 1M tokens |
+| **Output** | $1.50 per 1M tokens |
 
-### Stime Pratiche
+### Practical Estimates
 
-- **Una conversazione tipica (10 messaggi):** ~$0.002 (0.2 centesimi)
-- **100 conversazioni:** ~$0.20
-- **Credito $5:** ~2.500 conversazioni
+- **Typical conversation (10 messages):** ~$0.002 (0.2 cents)
+- **100 conversations:** ~$0.20
+- **$5 credit:** ~2,500 conversations
 
-💡 **Tip:** Monitora i costi su [platform.openai.com/usage](https://platform.openai.com/usage)
+💡 **Tip:** Monitor your costs at [platform.openai.com/usage](https://platform.openai.com/usage)
 
 ---
 
-## 🔒 Sicurezza
+## 🔒 Security
 
-### ⚠️ Regole Fondamentali
+### ⚠️ Important Rules
 
-1. **MAI committare il file `.env` su GitHub!**
-2. **MAI condividere la tua API key** pubblicamente
-3. **Rigenera la chiave** se esposta accidentalmente
+1. **NEVER commit `.env` file to GitHub!**
+2. **NEVER share your API key publicly**
+3. **Regenerate key immediately if exposed**
 
-### File Protetti da `.gitignore`
+### Protected by `.gitignore`
 
 ```
 .env
 __pycache__/
 *.pyc
-*.pyo
 venv/
-.vscode/
-.idea/
+conversations/
 ```
 
-### Se Hai Esposto la Chiave
+### If You Exposed Your Key
 
-1. Vai su [platform.openai.com/api-keys](https://platform.openai.com/api-keys)
-2. Elimina la chiave compromessa
-3. Crea una nuova chiave
-4. Aggiorna il file `.env`
-
----
-
-## 📝 Roadmap
-
-### ✅ Fase 1 - Base (Completata)
-- [x] Connessione API OpenAI
-- [x] Chat interattiva funzionante
-- [x] Gestione errori base
-- [x] README documentazione
-
-### ✅ Fase 2 - Persistenza (Completata)
-- [x] Comando `/save` per salvare chat in JSON
-- [x] Comando `/load` per caricare chat salvate
-- [x] Comando `/new` per reset conversazione
-- [x] Formato JSON per storage in `conversations/`
-- [x] Comando `/list` per elencare le conversazioni salvate
-
-### 🔄 Fase 3 - Miglioramenti (In corso)
-- [x] Refactoring con OOP (classe `ChatManager`)
-- [ ] Indicatore "GPT sta scrivendo..."
-- [ ] Colorazione sintassi codice
-- [ ] Statistiche conversazione (token, costi)
-- [ ] Export in Markdown/PDF
-- [ ] Supporto GPT-4
+1. Go to [platform.openai.com/api-keys](https://platform.openai.com/api-keys)
+2. Delete the compromised key
+3. Create a new key
+4. Update your `.env` file
 
 ---
 
 ## 🐛 Troubleshooting
 
-### Problema: "API key non valida"
+### Error: "OPENAI_API_KEY not found"
 
-**Soluzione:**
+**Solution:**
 ```bash
-# Verifica che .env contenga la chiave corretta
-# Assicurati che non ci siano spazi extra
-OPENAI_API_KEY=sk-proj-TUA_CHIAVE  # ❌ Spazio dopo!
-OPENAI_API_KEY=sk-proj-TUA_CHIAVE   # ✅ Corretto
+# Create .env file with your API key
+echo "OPENAI_API_KEY=your-key-here" > .env
 ```
 
-### Problema: "ModuleNotFoundError: No module named 'openai'"
+### Error: "ModuleNotFoundError: No module named 'openai'"
 
-**Soluzione:**
+**Solution:**
 ```bash
-# Reinstalla dipendenze
+# Reinstall dependencies
 pip install -r requirements.txt
-
-# Oppure installa manualmente
-pip install openai python-dotenv
 ```
 
-### Problema: "Rate limit exceeded"
+### Error: "Rate limit exceeded"
 
-**Soluzione:**
-- Hai superato il limite di richieste/minuto
-- Aspetta 60 secondi
-- Riprova la richiesta
+**Solution:**
+- You exceeded the requests/minute limit
+- Wait 60 seconds
+- Try again
 
-### Problema: "Insufficient credits"
+### Error: "Insufficient credits"
 
-**Soluzione:**
-- Crediti OpenAI esauriti
-- Aggiungi credito su [platform.openai.com/billing](https://platform.openai.com/billing)
-
----
-
-## 🤝 Contribuire
-
-Contributi benvenuti! Se vuoi migliorare il progetto:
-
-1. **Fork** del repository
-2. Crea un **branch** per la feature (`git checkout -b feature/nuova-funzione`)
-3. **Commit** delle modifiche (`git commit -m 'Aggiunta nuova funzione'`)
-4. **Push** al branch (`git push origin feature/nuova-funzione`)
-5. Apri una **Pull Request**
+**Solution:**
+- Your OpenAI credits are depleted
+- Add credit at [platform.openai.com/billing](https://platform.openai.com/billing)
 
 ---
 
-## 👤 Autore
+## 📚 What I Learned
+
+This project was built as a portfolio piece demonstrating:
+
+**Technical skills:**
+- **Python OOP:** Refactored 290-line procedural code to clean class-based architecture
+- **API integration:** OpenAI Chat Completions with error handling and rollback
+- **State management:** Conversation history and JSON persistence
+- **CLI design:** Intuitive command system and user feedback
+
+**Key challenges solved:**
+- **OOP refactoring** - Migrated from procedural to object-oriented (zero global variables)
+- **Conversation persistence** - Designed JSON schema for save/load with metadata
+- **Error resilience** - Implemented graceful API failure handling with message rollback
+- **UX polish** - Created clear commands and helpful user feedback
+
+---
+
+## 🗺️ Roadmap
+
+Future enhancements:
+
+- [ ] Export conversations to Markdown/PDF
+- [ ] Token usage and cost tracking
+- [ ] Support for GPT-4 and other models
+- [ ] Conversation search functionality
+- [ ] Streaming responses (real-time output)
+
+---
+
+## 🤝 Contributing
+
+Contributions welcome! If you want to improve the project:
+
+1. **Fork** the repository
+2. Create a **feature branch** (`git checkout -b feature/amazing-feature`)
+3. **Commit** your changes (`git commit -m 'Add amazing feature'`)
+4. **Push** to the branch (`git push origin feature/amazing-feature`)
+5. Open a **Pull Request**
+
+---
+
+## 👤 Author
 
 **Stefano Paciolla**
 
@@ -293,50 +351,50 @@ Contributi benvenuti! Se vuoi migliorare il progetto:
 - 🔗 LinkedIn: [linkedin.com/in/stefano-paciolla-561519209](https://www.linkedin.com/in/stefano-paciolla-561519209/)
 - 🐙 GitHub: [@paciollastefano01-beep](https://github.com/paciollastefano01-beep)
 
-💼 **AI Automation Specialist** in formazione
-🎯 Progetto #1 del percorso da 180 giorni in AI e Automazione
+💼 **AI Automation Specialist**
+🎯 Portfolio Project #1
 
 ---
 
-## 📄 Licenza
+## 📄 License
 
-Questo progetto è rilasciato sotto licenza **MIT License**.
+This project is licensed under the **MIT License**.
 
-Puoi:
-- ✅ Usare commercialmente
-- ✅ Modificare
-- ✅ Distribuire
-- ✅ Uso privato
+You can:
+- ✅ Use commercially
+- ✅ Modify
+- ✅ Distribute
+- ✅ Private use
 
-Vedi il file [LICENSE](LICENSE) per i dettagli completi.
-
----
-
-## 🙏 Crediti
-
-- [OpenAI](https://openai.com/) per l'API GPT-3.5-turbo
-- [Python Software Foundation](https://www.python.org/) per Python
-- Community open-source per le librerie utilizzate
+See [LICENSE](LICENSE) file for full details.
 
 ---
 
-## ⭐ Supporto
+## 🙏 Acknowledgments
 
-Se questo progetto ti è stato utile:
-
-- ⭐ Lascia una **stella** al repository
-- 🐛 Segnala **bug** o **problemi**
-- 💡 Proponi **nuove feature**
-- 📢 **Condividi** con altri sviluppatori
+- [OpenAI](https://openai.com/) for GPT-3.5-turbo API
+- [Python Software Foundation](https://www.python.org/) for Python
+- Open-source community for libraries used
 
 ---
 
-## 📚 Risorse Utili
+## ⭐ Support
 
-- [Documentazione OpenAI API](https://platform.openai.com/docs)
-- [Guida Python Dotenv](https://pypi.org/project/python-dotenv/)
-- [Best Practices API Keys](https://platform.openai.com/docs/guides/production-best-practices)
+If this project helped you:
+
+- ⭐ **Star** the repository
+- 🐛 **Report** bugs or issues
+- 💡 **Suggest** new features
+- 📢 **Share** with other developers
 
 ---
 
-**Buon coding! 🚀**
+## 📚 Useful Resources
+
+- [OpenAI API Documentation](https://platform.openai.com/docs)
+- [Python Dotenv Guide](https://pypi.org/project/python-dotenv/)
+- [API Keys Best Practices](https://platform.openai.com/docs/guides/production-best-practices)
+
+---
+
+**Built with ❤️ and Python**
