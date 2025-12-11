@@ -47,7 +47,7 @@
 
 **Available commands**
 
-<img src="screenshots/03-help.png" width="800">
+<img src="screenshots/03-help.png" width="500">
 
 ---
 
