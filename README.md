@@ -13,7 +13,7 @@
 **Professional CLI chatbot** with full conversation management and OOP architecture.
 
 ✅ **AI-powered conversations**
-  - Real-time chat with GPT-3.5-turbo
+  - Real-time chat with gpt-4o-mini
   - Full conversation history maintained
   - Customizable system message
 
