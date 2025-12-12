@@ -39,7 +39,7 @@ class ChatManager:
         self.client: OpenAI = OpenAI(api_key=api_key)
 
         # 5) configurazione applicazione
-        self.model_name: str = "gpt-5-nano"
+        self.model_name: str = "gpt-4o-mini"
         self.conversations_dir: str = "conversations"
 
         # 6) Messaggio di sistema iniziale (prompt del modello)
