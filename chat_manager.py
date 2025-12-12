@@ -39,7 +39,7 @@ class ChatManager:
         self.client: OpenAI = OpenAI(api_key=api_key)
 
         # 5) configurazione applicazione
-        self.model_name: str = "gpt-3.5-turbo"
+        self.model_name: str = "gpt-5-nano"
         self.conversations_dir: str = "conversations"
 
         # 6) Messaggio di sistema iniziale (prompt del modello)
@@ -316,9 +316,7 @@ class ChatManager:
             self.messages.pop()
 
             # risposta di cortesia all'utente
-            return (
-                "Scusa, si è verificato un errore tecnico con l'AI. Riprova tra poco"
-            )
+            return "Scusa, si è verificato un errore tecnico con l'AI. Riprova tra poco"
 
         # 3) Se tutto ok, estraggo testo della risposta di GPT
         assistant_message = response.choices[0].message.content
