@@ -1,6 +1,6 @@
 # 💬 CLI Chat GPT
 
-> Terminal chatbot powered by OpenAI GPT-3.5-turbo with **conversation persistence**, **multi-chat management**, and **intuitive command system**.
+> Terminal chatbot powered by OpenAI gpt-5-nano with **conversation persistence**, **multi-chat management**, and **intuitive command system**.
 
 ![Python](https://img.shields.io/badge/python-3.10+-blue.svg)
 ![OpenAI](https://img.shields.io/badge/OpenAI-GPT--3.5-green.svg)
@@ -41,7 +41,7 @@
 
 <img src="screenshots/01-avvio.png" width="800">
 
-**Chat with GPT-3.5**
+**Chat with gpt-5-nano**
 
 <img src="screenshots/02-conversazione.png" width="800">
 
@@ -230,18 +230,20 @@ if __name__ == "__main__":
 
 ## 💰 API Costs
 
-### GPT-3.5-turbo Pricing
+### gpt-5-nano Pricing
 
 | Type | Cost |
 |------|------|
-| **Input** | $0.50 per 1M tokens |
-| **Output** | $1.50 per 1M tokens |
+| **Input** | $0.05 per 1M tokens |
+| **Output** | $0.40 per 1M tokens |
 
 ### Practical Estimates
 
-- **Typical conversation (10 messages):** ~$0.002 (0.2 cents)
-- **100 conversations:** ~$0.20
-- **$5 credit:** ~2,500 conversations
+**Using `gpt-5-nano` (ultra-economical model):**
+
+- **Single conversation (10 messages):** ~$0.001 (0.1 cents)
+- **100 conversations:** ~$0.10
+- **$5 credit:** ~47,600 conversations
 
 💡 **Tip:** Monitor your costs at [platform.openai.com/usage](https://platform.openai.com/usage)
 
@@ -378,7 +380,7 @@ See [LICENSE](LICENSE) file for full details.
 
 ## 🙏 Acknowledgments
 
-- [OpenAI](https://openai.com/) for GPT-3.5-turbo API
+- [OpenAI](https://openai.com/) for gpt-5-nano API
 - [Python Software Foundation](https://www.python.org/) for Python
 - Open-source community for libraries used
 
