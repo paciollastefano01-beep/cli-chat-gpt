@@ -3,7 +3,7 @@
 > Terminal chatbot powered by OpenAI gpt-4o-mini with **conversation persistence**, **multi-chat management**, and **intuitive command system**.
 
 ![Python](https://img.shields.io/badge/python-3.10+-blue.svg)
-![OpenAI](https://img.shields.io/badge/OpenAI-GPT--3.5-green.svg)
+![OpenAI](https://img.shields.io/badge/OpenAI-GPT--4o-mini-green.svg)
 ![License](https://img.shields.io/badge/license-MIT-blue.svg)
 
 ---
